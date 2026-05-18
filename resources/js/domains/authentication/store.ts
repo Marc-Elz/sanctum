@@ -12,7 +12,8 @@ export const authenticate = async (data: authType) => {
     //     console.log(response);
     //     // return postRequest("/login", data);
     // });
+    // Trigger laravel to generate and set the xsrf token?
+    await axios.get("/sanctum/csrf-cookie");
     const response = await postRequest("/login", data);
-    console.log(response);
     return response;
 };

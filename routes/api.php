@@ -11,5 +11,6 @@ Route::get('/user', function (Request $request) {
 Route::get('/me', function (Request $request) {
     return $request->user();
 })->middleware('password.confirm');
+// ?? password.confirm maybe not a JSON way?
 
 Route::post('/login', [LoginController::class, 'authenticate']);

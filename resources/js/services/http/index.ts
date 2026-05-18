@@ -40,6 +40,6 @@ http.interceptors.response.use(
             setErrorBag(error.response.data.errors); // Sla validatiefouten op in de error bag
             setMessage(error.response.data.message); // Sla de algemene foutmelding op
         }
-        return Promise.reject(error);
+        //return Promise.reject(error);
     },
 );

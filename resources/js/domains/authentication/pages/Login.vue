@@ -21,10 +21,6 @@ const handleSubmit = async (data: authType) => {
     console.debug("response");
     console.log(result);
 
-    // if (result.status === 200) {
-    //     router.push({ name: "auth.locked" });
-    // } else {
-    //     //setMessage()
-    // }
+    router.push({ name: "auth.locked" });
 };
 </script>
