@@ -7,13 +7,12 @@ export const fetchUser = async () => {
 };
 
 export const authenticate = async (data: authType) => {
-    // await axios.get("/sanctum/csrf-cookie").then((response) => {
-    //     console.log("CRSF response:");
-    //     console.log(response);
-    //     // return postRequest("/login", data);
-    // });
-    // Trigger laravel to generate and set the xsrf token?
     await axios.get("/sanctum/csrf-cookie");
     const response = await postRequest("/login", data);
+    return response;
+};
+
+export const logOutUser = async (data: authType) => {
+    const response = await postRequest("/logout", data);
     return response;
 };

@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import Login from "./domains/authentication/pages/Login.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
     <h1>Sanctum test</h1>
