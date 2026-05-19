@@ -18,7 +18,6 @@ const me = ref(null);
 
 async function fetch() {
     const res = await fetchUser();
-    console.log(res);
     me.value = res.status === 200 ? await res.data : null;
 }
 
