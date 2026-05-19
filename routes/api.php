@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/me', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
-// ?? password.confirm maybe not a JSON way?
 
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
